@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(125deg, #a57b62, #efdcb1);
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
+    max-height: 595px;
+    background-color: #22252D;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    border: 1px solid #333333;
+    box-shadow: 4px 4px 50px rgba(221, 209, 209, 0.2);
+
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 150px;
+    padding: 1rem;
+    color: #ffffff;
+    text-align: right;
+    flex: 1 1 0%;
+
+}
+
+.display .input {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+
+}
+
+.display .output {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    width: 320px;
+    overflow: auto;
+
+}
+
+.display .operator {
+    color: #f06161;
+}
+
+.display .brackets,
+.display .percentage {
+    color: #71f8df;
+
+}
+
+.keys {
+    display: grid;
+    background-color: #292d36;
+    padding: 1.2rem;
+    border-radius: 1.2rem 1.2rem 0 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 5px rgba(202, 191, 191, 0.1);
+}
+
+.keys .key {
+    display: block;
+    position: relative;
+    height: 0;
+    cursor: pointer;
+    padding-top: 90%;
+    background-color: #262933;
+    border-radius: 1.2rem;
+    box-shadow: 2px 2px 7px rgba(116, 116, 116, 0.3);
+    transition: 0.2s;
+    user-select: none;
+}
+
+.keys .key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+    font-weight: 650;
+    color: #ffffff;
+}
+
+.keys #isEqual {
+    background-color: #f06161;
+    transition: background-color 0.3s ease-out;
+}
+
+.keys #isEqual:active {
+    background-color: #71f8df;
+
+}
+
+.keys #isEqual span {
+    color: #ffffff;
+}
+
+
+.keys .key:hover {
+    box-shadow: inset 5px 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+.keys .key.operator span {
+    color: #f06161;
+}
+
+.keys .key.action span {
+    color: #71f8df;
+
+}
